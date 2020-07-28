@@ -1,4 +1,9 @@
-function reverse(str) {}
+function reverse(str) {
+  if (str === "") {
+    return str;
+  }
+  return reverse(str.substring(1)) + str.charAt(0);
+}
 
-// reverse('awesome') // 'emosewa'
+console.log(reverse("awesome")); // 'emosewa'
 // reverse('rithmschool') // 'loohcsmhtir'
